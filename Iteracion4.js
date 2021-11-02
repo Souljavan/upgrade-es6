@@ -35,3 +35,13 @@ const cities = [
 	{isVisited:true, name: 'Amsterdam'}, 
 	{isVisited:false, name: 'Seul'}
 ];
+
+const citieschanged=cities.map(function(x){
+	let temp = Object.assign({}, x);
+  if (temp.isVisited==true){
+  temp.name=temp.name+'-Visitado'
+  }
+  return(temp)
+})
+
+console.log(citieschanged);
