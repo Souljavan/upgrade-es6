@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+             <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+             <meta http-equiv="X-UA-Compatible" content="ie=edge">
+             <title>Document</title>
+</head>
+<body>
+  <input type="text" data-function="toFilterStreamers"/>
+
+<script>
+const streamers = [
+	{name: 'Rubius', age: 32, gameMorePlayed: 'Minecraft'},
+	{name: 'Ibai', age: 25, gameMorePlayed: 'League of Legends'},
+	{name: 'Reven', age: 43, gameMorePlayed: 'League of Legends'},
+	{name: 'AuronPlay', age: 33, gameMorePlayed: 'Among Us'}
+];
+
+document.querySelector("input").addEventListener("input",function(event){
+        let stremerfilter=streamers.filter(function(x){
+            if (x.name.includes(event.srcElement.value)){
+                return (x)
+            }
+        })
+        console.log(stremerfilter)
+        } );
+
+
+</script>
+
+</body>
+</html>
